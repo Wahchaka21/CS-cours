@@ -74,10 +74,9 @@ namespace firstProgramme
             //avec ce principe, on peut reprendre l'exemple plus haut pour demander l'age de la personne :
             //on créer bool ageValde qui commence à false, la boucle tourne tant que ageValide est false, i le Parse réussit, on met ageValide = true et la boucle s'arrête
             //si le Parse échoue, on va dans le catch, on affiche l'erreur, et la boucle recommence
-
             int age_int2 = 0;
             bool ageValide = false;
-            while (!ageValide)
+            while (ageValide == false)
             {
                 System.Console.WriteLine("Quel est ton age ?");
                 string monAge2 = Console.ReadLine();
