@@ -37,6 +37,7 @@ namespace firstProgramme
 
 
 
+
             //mais du coup cette façon de faire n'est pas opti, car l'utilisateur pourrais très bien rentrer un age invalide ou une string, il faut donc gérer les exceptions
             //donc comme en js, on peut faire des try et catch, donc on va recommencer une simulation :
             System.Console.WriteLine("Quel est ton age ?");
@@ -52,6 +53,7 @@ namespace firstProgramme
             {
                 System.Console.WriteLine("Erreur, vous devez rentrer un age valide !");
             }
+
 
 
 
@@ -80,7 +82,7 @@ namespace firstProgramme
                 {
                     age_int2 = int.Parse(monAge2);
                     //on peut même renforcer le programme, avec un if, else, parce que sans ça, il pourrais très bien troll et mettre 0 et le programme ferai 0 + 1
-                    if (age_int2 == 0)
+                    if (age_int2 <= 0)
                     {
                         System.Console.WriteLine("Erreur, vous devez rentrer un age valide !");
                         ageValide = false;
