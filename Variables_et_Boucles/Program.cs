@@ -1,19 +1,4 @@
-﻿/*dans la nouvelle version de C# (plus précisement depuis C# 9) il n'y a plus besoin de déclarer :
-using System;
-
-namespace firstProgramme
-{
-    internal class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World");
-        }
-    }
-
-Pour faire notre Hello World on à juste à faire Console.WriteLine("Hello World")
-}*/
-using System;
+﻿using System;
 using System.Security.Cryptography;
 namespace firstProgramme
 {
