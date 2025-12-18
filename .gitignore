@@ -5,3 +5,6 @@ c#_cours.sln
 /Fonctions/bin/
 /Fonctions/obj/
 /Fonctions/Fonctions.csproj
+Math/obj/
+Math/bin/
+Math/Math.csproj
