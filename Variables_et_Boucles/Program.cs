@@ -20,14 +20,14 @@ namespace firstProgramme
 
 
 
-            //petite astuce, taper cw puis tab fois et ça écrit Console.WriteLine();
+            //petite astuce, taper cw puis appuis sur tab 1 fois et ça écrit Console.WriteLine();
             //il y a une ligne de code qui nous permet de lire la console par exemple :
             System.Console.Write("Quel est votre nom ?"); //on va juste mettre Write
             string leNom2 = Console.ReadLine(); //enfaite ça va ouvrir la console, et je n'aurai que à taper le nom de la personne et ça va l'assigner à la variable
             System.Console.Write("et quel est ton âge ?");
             string age_str = Console.ReadLine();
             System.Console.WriteLine("donc vous vous applez " + leNom2 + " et vous avez " + age_str + " ans");
-            //int.Pars() est pour convertir une str en int car, console.ReadLine() ne renvoie que une string et non un nombre, donc on en peut pas faire par exemple
+            //int.Pars() est pour convertir une str en int car, console.ReadLine() ne renvoie que une string et non un nombre, donc on ne peut pas faire par exemple :
             //int age = Console.ReadLine(), ça serai faux, il faudrait mettre string. Donc pour palier à ce problème on déclare d'abord la lecture de la console dans un string :
             //string age_str = Console.ReadLine(); puis on passe cette variable à une nouvelle variable qui va remplacer le type string de age_str par un type int comme ceci :
             int age_num = int.Parse(age_str); //par contre ça marche que si on rentre un nombre, si on decide d'écrire une string, ça plante
