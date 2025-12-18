@@ -7,13 +7,13 @@ namespace firstProgramme
         //on peut reprendre le principe vu dans "Variables_et_Boucles" pour demander l'age d'une personne mais cette fois avec une fonction, comme ça
         //je pourrais par exemple créer une variable age_num et lui assigner la fonction DemanderAge();
         //on va décaler une fonction en dehors de la fonction main, car c'est la fonction main qui est appeller à chaque "dotnet run"
-        static int DemanderAge()
+        static int DemanderAge(string personName)
         {
             int age_int2 = 0;
             bool ageValide = false;
             while (ageValide == false)
             {
-                System.Console.WriteLine("Quel est ton age ?");
+                System.Console.WriteLine("Quel est l'age de " + personName + " ?");
                 string monAge2 = Console.ReadLine();
                 try
                 {
@@ -44,27 +44,40 @@ namespace firstProgramme
             //on va retourner les résultat
             return age_int2;
         }
-        static void Main(string[] args)
+        static string DemanderNom(int numeroPersonne)
         {
             string nom = "";
-            while (nom == "")
+            while (nom == "" || nom.Length <= 2)
             {
-                System.Console.WriteLine("Quel est ton nom ? ");
+                System.Console.WriteLine("Quel est le nom de la personne numéro " + numeroPersonne + " ?");
                 nom = Console.ReadLine();
                 nom = nom.Trim();
                 if (nom == "")
                 {
                     System.Console.WriteLine("Erreur : le nom ne doit pas être vide");
                 }
+                else if (nom.Length <= 2)
+                {
+                    System.Console.WriteLine("Veuillez rentrer un nom valide.");
+                }
             }
-
+            return nom;
+        }
+        static void Main(string[] args)
+        {
             //et du coup dans le main on peut déclarer notre fonction :
-            int age = DemanderAge();
+            string nom = DemanderNom(1);
+            string nom2 = DemanderNom(2);
+            int age = DemanderAge(nom);
+            int age2 = DemanderAge(nom2);
 
             // et ensuite je vais utiliser ma variable age :
-            System.Console.WriteLine("Bonjour, vous vous appelez " + nom + ", vous avez " + age + " ans.");
+            System.Console.WriteLine("Le nom de la première personne est donc " + nom + " et il/elle a " + age + " ans");
             int age_prochain = age + 1;
-            System.Console.WriteLine("Bientôt vous aurez " + age_prochain + " ans.");
+            System.Console.WriteLine("Donc l'année prochaine il/elle aura " + age_prochain + " ans.");
+            System.Console.WriteLine("Ensuite la deuxième personne s'appelle : " + nom2 + " et il/elle a " + age2 + " ans");
+            int age_prochain2 = age2 + 1;
+            System.Console.WriteLine("Donc l'année prochaine il/elle aura " + age_prochain2 + " ans");
         }
     }
 }
