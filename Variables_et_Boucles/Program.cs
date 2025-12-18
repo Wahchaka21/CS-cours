@@ -16,6 +16,10 @@ namespace firstProgramme
             bool BooleanVariable = true;
             Console.WriteLine("Salut " + String + " j'ai " + Number + " ans moi aussi et j'ai " + FloatingNumber + " points de mana " + BooleanVariable);
 
+
+
+
+
             //petite astuce, taper cw puis tab fois et ça écrit Console.WriteLine();
             //il y a une ligne de code qui nous permet de lire la console par exemple :
             System.Console.Write("Quel est votre nom ?"); //on va juste mettre Write
@@ -29,6 +33,10 @@ namespace firstProgramme
             int age_num = int.Parse(age_str); //par contre ça marche que si on rentre un nombre, si on decide d'écrire une string, ça plante
             int age_prochain = age_num + 1;
             System.Console.WriteLine("Vous aurez le 28 juin 2026 : " + age_prochain + " ans");
+
+
+
+
             //mais du coup cette façon de faire n'est pas opti, car l'utilisateur pourrais très bien rentrer un age invalide ou une string, il faut donc gérer les exceptions
             //donc comme en js, on peut faire des try et catch, donc on va recommencer une simulation :
             System.Console.WriteLine("Quel est ton age ?");
@@ -44,6 +52,9 @@ namespace firstProgramme
             {
                 System.Console.WriteLine("Erreur, vous devez rentrer un age valide !");
             }
+
+
+
 
             //mais ça serai bien que par exemple si le user rentre un string ou un age invalide, au lieu de juste lui mettre le message d'erreur, ça lui redemande son age juste après
             //donc pour ça il faut faire des boucle, voici un exemple de boucle while en C# :
@@ -68,11 +79,25 @@ namespace firstProgramme
                 try
                 {
                     age_int2 = int.Parse(monAge2);
-                    ageValide = true;
-
-                    int add_age = age_int2 + 1;
-                    System.Console.WriteLine("Votre age est : " + age_int2);
-                    System.Console.WriteLine("Vous aurez bientot : " + add_age);
+                    //on peut même renforcer le programme, avec un if, else, parce que sans ça, il pourrais très bien troll et mettre 0 et le programme ferai 0 + 1
+                    if (age_int2 == 0)
+                    {
+                        System.Console.WriteLine("Erreur, vous devez rentrer un age valide !");
+                        ageValide = false;
+                    }
+                    //pour faire une autre condition, commen en js avec un else if
+                    else if (age_int2 < 18)
+                    {
+                        System.Console.WriteLine("Vous devez être majeur, or vous avez " + age_int2 + " ans. Vous ne pouvez pas acceder à cette application.");
+                        return;
+                    }
+                    else
+                    {
+                        ageValide = true;
+                        int add_age = age_int2 + 1;
+                        System.Console.WriteLine("Votre age est : " + age_int2);
+                        System.Console.WriteLine("Vous aurez bientot : " + add_age);
+                    }
                 }
                 catch
                 {
