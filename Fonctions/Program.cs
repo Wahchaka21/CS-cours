@@ -73,11 +73,9 @@ namespace firstProgramme
 
             // et ensuite je vais utiliser ma variable age :
             System.Console.WriteLine("Le nom de la première personne est donc " + nom + " et il/elle a " + age + " ans");
-            int age_prochain = age + 1;
-            System.Console.WriteLine("Donc l'année prochaine il/elle aura " + age_prochain + " ans.");
+            System.Console.WriteLine("Donc l'année prochaine il/elle aura " + (age + 1) + " ans.");
             System.Console.WriteLine("Ensuite la deuxième personne s'appelle : " + nom2 + " et il/elle a " + age2 + " ans");
-            int age_prochain2 = age2 + 1;
-            System.Console.WriteLine("Donc l'année prochaine il/elle aura " + age_prochain2 + " ans");
+            System.Console.WriteLine("Donc l'année prochaine il/elle aura " + (age2 + 1) + " ans");
         }
     }
 }
