@@ -28,7 +28,7 @@ namespace MyApp
             {
                 case 1:
                     Console.WriteLine("Monday");
-                    break;
+                    break; //break stop l'execution de la switch, ça interrompt l'exécution du reste du code, une fois une correspondance est trouvée le bloc break est exécuté.
                 case 2:
                     Console.WriteLine("Tuesday");
                     break;
@@ -49,6 +49,22 @@ namespace MyApp
                     break;
             }
             // Outputs "Thursday" (day 4)
+
+            //il y a également "default" :
+            int day2 = 4;
+            switch (day2)
+            {
+                case 6:
+                    Console.WriteLine("Today is Saturday.");
+                    break;
+                case 7:
+                    Console.WriteLine("Today is Sunday.");
+                    break;
+                default: // en gros c'est si y a pas de correspondance, comme ici il n'y a pas "case 4" et bien la réponse par défaut est le bloc default
+                    Console.WriteLine("Looking forward to the Weekend.");
+                    break;
+            }
+            // Outputs "Looking forward to the Weekend."
         }
     }
 }
