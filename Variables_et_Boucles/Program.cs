@@ -54,7 +54,7 @@ namespace firstProgramme
             }
 
             //boucle forEach, pour les tableaux
-            string[] cars = { "Ciroen", "Peugeot", "Renault" };
+            string[] cars = ["Ciroën", "Peugeot", "Renault"];
             foreach (string k in cars)
             {
                 System.Console.WriteLine(k);

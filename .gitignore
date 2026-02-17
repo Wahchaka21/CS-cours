@@ -11,3 +11,6 @@ Math/Math.csproj
 Switch/obj/
 Switch/bin/
 Switch/Switch.csproj
+classes/obj/
+classes/bin/
+classes/Switch.csproj
