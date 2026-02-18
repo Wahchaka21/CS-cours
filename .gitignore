@@ -13,4 +13,7 @@ Switch/bin/
 Switch/Switch.csproj
 classes/obj/
 classes/bin/
-classes/Switch.csproj
+classes/classes.csproj
+Object/obj/
+Object/bin/
+Object/Object.csproj
