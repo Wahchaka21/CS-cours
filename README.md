@@ -48,7 +48,63 @@ namespace Backend.Data
 }
 ```
 
-Ajouter dans Program.cs le ligne avec un commentaire au dessus
+Ajouter dans Program.cs le :
+```js
+using Backend.Data;
+using Microsoft.EntityFrameworkCore;
+
+//connexion à PostgreSQL 
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+//pour un server propre ces 3 lignes =>
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+//équivalent du cors en node.js =>
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(policy =>
+        policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+});
+
+builder.Services.AddOpenApi();
+
+var app = builder.Build();
+
+//vérifie la co au démarrage pour la bdd =>
+
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    try
+    {
+        db.Database.OpenConnection();
+        db.Database.CloseConnection();
+        Console.WriteLine("Base de données connectée.");
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Erreur lors de la connexion à la base de données : {ex.Message}");
+    }
+}
+
+if (app.Environment.IsDevelopment())
+{
+    app.MapOpenApi();
+    //rajouter ces deux
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+//à mettre ces trois lignes également
+app.UseCors();
+app.UseAuthorization();
+app.MapControllers();
+
+app.UseHttpsRedirection();
+```
 
 pour utiliser l'équivalent de sequelize :
 ```bash
