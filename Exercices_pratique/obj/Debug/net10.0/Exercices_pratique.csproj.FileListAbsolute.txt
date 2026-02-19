@@ -1,0 +1,15 @@
+C:\Users\Wahch\Desktop\bordel\code\c#_cours\Exercices_pratique\bin\Debug\net10.0\Exercices_pratique.exe
+C:\Users\Wahch\Desktop\bordel\code\c#_cours\Exercices_pratique\bin\Debug\net10.0\Exercices_pratique.deps.json
+C:\Users\Wahch\Desktop\bordel\code\c#_cours\Exercices_pratique\bin\Debug\net10.0\Exercices_pratique.runtimeconfig.json
+C:\Users\Wahch\Desktop\bordel\code\c#_cours\Exercices_pratique\bin\Debug\net10.0\Exercices_pratique.dll
+C:\Users\Wahch\Desktop\bordel\code\c#_cours\Exercices_pratique\bin\Debug\net10.0\Exercices_pratique.pdb
+C:\Users\Wahch\Desktop\bordel\code\c#_cours\Exercices_pratique\obj\Debug\net10.0\Exercices_pratique.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Wahch\Desktop\bordel\code\c#_cours\Exercices_pratique\obj\Debug\net10.0\Exercices_pratique.AssemblyInfoInputs.cache
+C:\Users\Wahch\Desktop\bordel\code\c#_cours\Exercices_pratique\obj\Debug\net10.0\Exercices_pratique.AssemblyInfo.cs
+C:\Users\Wahch\Desktop\bordel\code\c#_cours\Exercices_pratique\obj\Debug\net10.0\Exercices_pratique.csproj.CoreCompileInputs.cache
+C:\Users\Wahch\Desktop\bordel\code\c#_cours\Exercices_pratique\obj\Debug\net10.0\Exercices_pratique.sourcelink.json
+C:\Users\Wahch\Desktop\bordel\code\c#_cours\Exercices_pratique\obj\Debug\net10.0\Exercices_pratique.dll
+C:\Users\Wahch\Desktop\bordel\code\c#_cours\Exercices_pratique\obj\Debug\net10.0\refint\Exercices_pratique.dll
+C:\Users\Wahch\Desktop\bordel\code\c#_cours\Exercices_pratique\obj\Debug\net10.0\Exercices_pratique.pdb
+C:\Users\Wahch\Desktop\bordel\code\c#_cours\Exercices_pratique\obj\Debug\net10.0\Exercices_pratique.genruntimeconfig.cache
+C:\Users\Wahch\Desktop\bordel\code\c#_cours\Exercices_pratique\obj\Debug\net10.0\ref\Exercices_pratique.dll
