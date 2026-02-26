@@ -117,4 +117,23 @@ namespace Exercices_pratique
             System.Console.WriteLine("La valeur finale de i : " + i);
         }
     }
+    public class Moyenne
+    {
+        public int[] Nb;
+        public Moyenne(int[] Nb)
+        {
+            this.Nb = Nb;
+        }
+
+        public void Avg()
+        {
+            int sum = 0;
+            for (int i = 0; i < Nb.Length; i++)
+            {
+                sum += Nb[i];
+            }
+            double avg = (double)sum / Nb.Length;
+            System.Console.WriteLine(avg);
+        }
+    }
 }

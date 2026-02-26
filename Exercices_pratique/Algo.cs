@@ -15,11 +15,11 @@ namespace Exercices_pratique
         public static void DevineLeNombre()
         {
             int monNombreInt = 0;
-            int nombreMystere = RandomInt(0, 100);
+            int nombreMystere = RandomInt(0, 50);
             bool BonneReponse = false;
             while (BonneReponse == false)
             {
-                System.Console.WriteLine("Le chiffre/nombre mystère ce trouve entre 0 et 100.");
+                System.Console.WriteLine("Le chiffre/nombre mystère ce trouve entre 0 et 50.");
                 System.Console.WriteLine("Quel est le chiffre ou le nombre que tu as choisi ?");
                 string monNombre = Console.ReadLine();
                 try
@@ -30,9 +30,9 @@ namespace Exercices_pratique
                         System.Console.WriteLine("La réponse ne peux pas être en dessous de 0.");
                         BonneReponse = false;
                     }
-                    else if (monNombreInt > 100)
+                    else if (monNombreInt > 50)
                     {
-                        System.Console.WriteLine("La réponse ne peux pas être au dessus de 100 !");
+                        System.Console.WriteLine("La réponse ne peux pas être au dessus de 50 !");
                         BonneReponse = false;
                     }
                     else if (monNombreInt < nombreMystere)

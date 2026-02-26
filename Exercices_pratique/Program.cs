@@ -24,6 +24,8 @@ namespace MyApp
             //des boucles
             TestBoucle.BoucleSimpleFor();
             TestBoucle.BoucleSimpleWhile();
+            Moyenne a = new Moyenne([48, 78, 98]);
+            a.Avg();
 
             //algo
             Algo.DevineLeNombre();
