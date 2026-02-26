@@ -50,11 +50,6 @@ namespace Exercices_pratique
             new Item("Frieren", 100000000),
         };
 
-        public Supermarché()
-        {
-
-        }
-
         public void AjouterAuPanier(string name)
         {
             Item product = items.Find(p => p.name == name);
@@ -71,10 +66,10 @@ namespace Exercices_pratique
         }
         public void AfficherPanier()
         {
-            System.Console.WriteLine("=== Panier ===");
+            System.Console.WriteLine("=== Panier ==>");
             foreach (Item produit in panier)
             {
-                System.Console.WriteLine(produit.name + " - " + produit.prix + "€");
+                System.Console.WriteLine("Produit: " + produit.name + " - Prix: " + produit.prix + "€");
             }
         }
         public void SupprimerDuPanier(string name)
@@ -98,7 +93,28 @@ namespace Exercices_pratique
             {
                 sum += panier[i].prix;
             }
-            System.Console.WriteLine($"Vous devez payer : {sum}€");
+            System.Console.WriteLine($"Vous devez payer: {sum}€");
+        }
+    }
+    public class TestBoucle
+    {
+        public static void BoucleSimpleFor()
+        {
+            string[] tab = ["Ahri", "Frieren", "Ubel"];
+            for (int i = 0; i < tab.Length; i++)
+            {
+                System.Console.WriteLine(tab[i]);
+            }
+        }
+        public static void BoucleSimpleWhile()
+        {
+            int a = 20;
+            int i = 0;
+            while (i < a)
+            {
+                i++;
+            }
+            System.Console.WriteLine("La valeur finale de i : " + i);
         }
     }
 }

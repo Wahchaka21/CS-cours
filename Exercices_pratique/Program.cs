@@ -20,6 +20,13 @@ namespace MyApp
             client1.AfficherPanier();
             client1.OrTotal();
             //===================================================================================================
+
+            //des boucles
+            TestBoucle.BoucleSimpleFor();
+            TestBoucle.BoucleSimpleWhile();
+
+            //algo
+            Algo.DevineLeNombre();
         }
     }
 }
