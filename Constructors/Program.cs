@@ -1,4 +1,5 @@
 ﻿using System;
+using Constructors;
 
 namespace MyApp
 {
@@ -30,6 +31,8 @@ namespace MyApp
             human2.Sleep();
             human2.NameAge();
 
+            Constructors_Surchargés pizza = new Constructors_Surchargés("Cuite", "Sauce tomate", "Raclette");
+            pizza.Commande();
         }
     }
     class Human
